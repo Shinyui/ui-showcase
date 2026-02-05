@@ -72,12 +72,12 @@ function GlassCard({
           </div>
         )}
         {title && (
-          <h3 className="text-lg font-semibold text-white mb-2">
+          <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--color-text-primary)' }}>
             {title}
           </h3>
         )}
         {description && (
-          <p className="text-sm text-white/70 mb-4">
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-muted)' }}>
             {description}
           </p>
         )}
@@ -158,15 +158,15 @@ export function GlassmorphismShowcase() {
               animate={{ opacity: 1, scale: 1 }}
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2"
             >
-              <Sparkles className="h-4 w-4 text-white/70" />
-              <span className="text-sm font-medium text-white/90">
+              <Sparkles className="h-4 w-4" style={{ color: 'var(--color-text-muted)' }} />
+              <span className="text-sm font-medium" style={{ color: 'var(--color-text-primary)' }}>
                 Liquid Glass Effects
               </span>
             </motion.div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-text-primary)' }}>
               Glassmorphism Showcase
             </h2>
-            <p className="text-white/60">
+            <p style={{ color: 'var(--color-text-muted)' }}>
               Premium liquid glass cards with enhanced blur, light reflections, and hover glow effects.
               The glass effect adapts to each theme's unique color palette.
             </p>
@@ -178,9 +178,9 @@ export function GlassmorphismShowcase() {
               variant="subtle"
               title="Subtle Glass"
               description="Light glassmorphism with minimal blur and transparency."
-              icon={<Palette className="h-6 w-6 text-white/80" />}
+              icon={<Palette className="h-6 w-6" style={{ color: 'var(--color-text-primary)' }} />}
             >
-              <div className="text-xs text-white/50 space-y-1">
+              <div className="text-xs space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                 <div className="flex justify-between">
                   <span>Blur:</span>
                   <span className="font-mono">12px</span>
@@ -196,9 +196,9 @@ export function GlassmorphismShowcase() {
               variant="default"
               title="Default Glass"
               description="Balanced glass effect with standard blur and light border highlights."
-              icon={<Shield className="h-6 w-6 text-white/80" />}
+              icon={<Shield className="h-6 w-6" style={{ color: 'var(--color-text-primary)' }} />}
             >
-              <div className="text-xs text-white/50 space-y-1">
+              <div className="text-xs space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                 <div className="flex justify-between">
                   <span>Blur:</span>
                   <span className="font-mono">20px</span>
@@ -214,9 +214,9 @@ export function GlassmorphismShowcase() {
               variant="strong"
               title="Strong Glass"
               description="Heavy glassmorphism with maximum blur and opacity."
-              icon={<Zap className="h-6 w-6 text-white/80" />}
+              icon={<Zap className="h-6 w-6" style={{ color: 'var(--color-text-primary)' }} />}
             >
-              <div className="text-xs text-white/50 space-y-1">
+              <div className="text-xs space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                 <div className="flex justify-between">
                   <span>Blur:</span>
                   <span className="font-mono">28px</span>
@@ -233,9 +233,9 @@ export function GlassmorphismShowcase() {
               hover="premium"
               title="Liquid Glass"
               description="Premium liquid glass with enhanced hover glow effect."
-              icon={<Sparkles className="h-6 w-6 text-white/80" />}
+              icon={<Sparkles className="h-6 w-6" style={{ color: 'var(--color-text-primary)' }} />}
             >
-              <div className="text-xs text-white/50 space-y-1">
+              <div className="text-xs space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                 <div className="flex justify-between">
                   <span>Blur:</span>
                   <span className="font-mono">36px</span>
@@ -251,12 +251,12 @@ export function GlassmorphismShowcase() {
           {/* Hover Effects Section */}
           <div className="space-y-4 pt-4">
             <div className="flex items-center gap-2">
-              <MousePointer2 className="h-5 w-5 text-white/60" />
-              <h3 className="text-xl font-semibold text-white">
+              <MousePointer2 className="h-5 w-5" style={{ color: 'var(--color-text-muted)' }} />
+              <h3 className="text-xl font-semibold" style={{ color: 'var(--color-text-primary)' }}>
                 Hover Effects
               </h3>
             </div>
-            <p className="text-sm text-white/50">
+            <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
               Try hovering over the cards below to see different interaction effects.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -265,7 +265,7 @@ export function GlassmorphismShowcase() {
                 hover="lift"
                 title="Lift Effect"
                 description="Card lifts up on hover with smooth vertical transition."
-                icon={<Info className="h-6 w-6 text-white/80" />}
+                icon={<Info className="h-6 w-6" style={{ color: 'var(--color-text-primary)' }} />}
               />
 
               <GlassCard
@@ -288,13 +288,13 @@ export function GlassmorphismShowcase() {
 
           {/* Design Specs */}
           <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--color-text-primary)' }}>
               Design Specifications
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
               <div>
-                <h4 className="font-medium text-white/80 mb-2">Blur Levels</h4>
-                <ul className="space-y-1 text-white/50">
+                <h4 className="font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>Blur Levels</h4>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                   <li>Subtle: 12px</li>
                   <li>Default: 20px</li>
                   <li>Strong: 28px</li>
@@ -302,24 +302,24 @@ export function GlassmorphismShowcase() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-white/80 mb-2">Background</h4>
-                <ul className="space-y-1 text-white/50">
+                <h4 className="font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>Background</h4>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                   <li>Subtle: bg-white/10</li>
                   <li>Default: bg-white/15</li>
                   <li>Strong: bg-white/20</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-white/80 mb-2">Border Colors</h4>
-                <ul className="space-y-1 text-white/50">
+                <h4 className="font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>Border Colors</h4>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                   <li>Base: border-white/20</li>
                   <li>Highlight: border-white/30</li>
                   <li>Glow: border-white/40</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium text-white/80 mb-2">Animation</h4>
-                <ul className="space-y-1 text-white/50">
+                <h4 className="font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>Animation</h4>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-muted)' }}>
                   <li>Duration: 150-300ms</li>
                   <li>Easing: ease-out</li>
                   <li>Theme-based colors</li>
