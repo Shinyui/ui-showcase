@@ -84,8 +84,8 @@ export const roseTheme: DesignSystemTheme = {
     saturate: '180%',
     bg: { subtle: 'rgba(244, 63, 94, 0.1)', default: 'rgba(244, 63, 94, 0.2)', strong: 'rgba(244, 63, 94, 0.3)' },
     bgDark: { subtle: 'rgba(28, 11, 11, 0.3)', default: 'rgba(28, 11, 11, 0.5)', strong: 'rgba(28, 11, 11, 0.7)' },
-    border: { light: 'rgba(244, 63, 94, 0.3)', highlight: 'rgba(244, 63, 94, 0.5)', dark: 'rgba(244, 63, 94, 0.1)', darkHighlight: 'rgba(244, 63, 94, 0.2)' },
-    shadow: { sm: '0 4px 6px -1px rgba(244, 63, 94, 0.1)', md: '0 8px 32px 0 rgba(244, 63, 94, 0.15)', lg: '0 20px 40px -5px rgba(244, 63, 94, 0.2)' },
+    border: { light: 'rgba(244, 63, 94, 0.3)', highlight: 'rgba(244, 63, 94, 0.5)', dark: 'rgba(244, 63, 94, 0.1)', darkHighlight: 'rgba(244, 63, 94, 0.2)', glow: 'rgba(244, 63, 94, 0.6)' },
+    shadow: { sm: '0 4px 6px -1px rgba(244, 63, 94, 0.1)', md: '0 8px 32px 0 rgba(244, 63, 94, 0.15)', lg: '0 20px 40px -5px rgba(244, 63, 94, 0.2)', xl: '0 30px 50px -10px rgba(244, 63, 94, 0.25)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)',

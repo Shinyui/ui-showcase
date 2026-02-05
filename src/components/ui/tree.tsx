@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 export interface TreeNode {
@@ -11,7 +10,7 @@ export interface TreeNode {
   disabled?: boolean
 }
 
-export interface TreeProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface TreeProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onSelect'> {
   data: TreeNode[]
   defaultExpanded?: string[]
   selectable?: boolean

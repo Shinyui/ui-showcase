@@ -24,7 +24,7 @@ const anchorLinkVariants = cva('inline-flex items-center gap-2', {
 })
 
 export interface AnchorLinkProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof anchorLinkVariants> {
   href: string
   icon?: React.ReactNode

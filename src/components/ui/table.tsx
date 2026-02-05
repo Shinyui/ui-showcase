@@ -74,8 +74,8 @@ export function Table<T extends Record<string, any>>({
 
   const handleSelectAll = (checked: boolean) => {
     const newSelection = checked
-      ? new Set(data.map(item => String(item[keyField])))
-      : new Set()
+      ? new Set(data.map(item => String(item[keyField] as string | number | boolean)))
+      : new Set<string>()
 
     if (!isControlled) {
       setInternalSelected(newSelection)
@@ -160,7 +160,7 @@ export function Table<T extends Record<string, any>>({
           </tr>
         </thead>
         <tbody className="divide-y divide-border-default">
-          {data.map((row, rowIndex) => {
+          {data.map((row) => {
             const key = String(row[keyField])
             const isSelected = selected.has(key)
 

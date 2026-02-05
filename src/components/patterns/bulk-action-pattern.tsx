@@ -8,7 +8,7 @@ export interface BulkAction {
   id: string
   label: string
   icon?: React.ReactNode
-  variant?: 'default' | 'destructive'
+  variant?: 'primary' | 'destructive' | 'ghost' | 'outline'
   onClick: (selectedIds: string[]) => void
 }
 
@@ -80,7 +80,7 @@ export function BulkActionPattern({
                 <Button
                   key={action.id}
                   size="sm"
-                  variant={action.variant || 'default'}
+                  variant={action.variant || 'primary'}
                   onClick={() => action.onClick(Array.from(selectedIds))}
                 >
                   {action.icon && <span className="mr-2">{action.icon}</span>}
@@ -107,7 +107,7 @@ export function BulkActionPattern({
             <Checkbox
               checked={allSelected}
               ref={someSelected && !allSelected ? (input) => {
-                if (input) input.indeterminate = true
+                if (input && 'indeterminate' in input) (input as any).indeterminate = true
               } : undefined}
               onCheckedChange={handleSelectAll}
             />

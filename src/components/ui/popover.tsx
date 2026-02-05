@@ -87,22 +87,22 @@ export function Popover({
 
     switch (placement) {
       case 'top':
-        styles.bottom = 'calc(100% + 8px)'
+        styles.bottom = `calc(100% + ${offset}px)`
         styles.left = '50%'
         styles.transform = 'translateX(-50%)'
         break
       case 'bottom':
-        styles.top = 'calc(100% + 8px)'
+        styles.top = `calc(100% + ${offset}px)`
         styles.left = '50%'
         styles.transform = 'translateX(-50%)'
         break
       case 'left':
-        styles.right = 'calc(100% + 8px)'
+        styles.right = `calc(100% + ${offset}px)`
         styles.top = '50%'
         styles.transform = 'translateY(-50%)'
         break
       case 'right':
-        styles.left = 'calc(100% + 8px)'
+        styles.left = `calc(100% + ${offset}px)`
         styles.top = '50%'
         styles.transform = 'translateY(-50%)'
         break

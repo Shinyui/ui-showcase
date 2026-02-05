@@ -1,7 +1,5 @@
 import * as React from 'react'
 import { ErrorState } from '@/components/ui/error-state'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 
 export interface ErrorPatternProps {
   title?: string
@@ -120,7 +118,7 @@ export function AsyncErrorBoundary({
 }: AsyncErrorBoundaryProps) {
   return (
     <ErrorBoundary
-      fallback={({ error, resetError }) =>
+      fallback={({ resetError }) =>
         fallback || <ErrorPattern code={500} onRetry={resetError} />
       }
     >

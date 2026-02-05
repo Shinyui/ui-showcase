@@ -34,7 +34,6 @@ export function TimePicker({
   variant = 'default',
   className,
   id,
-  ...props
 }: TimePickerProps) {
   const [isOpen, setIsOpen] = React.useState(false)
   const [hour, setHour] = React.useState(value?.getHours() || 12)

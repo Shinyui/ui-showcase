@@ -20,7 +20,7 @@ const toastVariants = cva('relative w-full px-4 py-3 rounded-md border shadow-lg
 })
 
 export interface ToastProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof toastVariants> {
   title?: string
   description?: string

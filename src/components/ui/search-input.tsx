@@ -56,7 +56,7 @@ export function SearchInput({
     </svg>
   )
 
-  const debouncedSearchRef = React.useRef<ReturnType<typeof setTimeout>>()
+  const debouncedSearchRef = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value

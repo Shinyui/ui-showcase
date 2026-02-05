@@ -58,8 +58,8 @@ export const darkDesireTheme: DesignSystemTheme = {
     saturate: '120%',
     bg: { subtle: 'rgba(45, 27, 78, 0.1)', default: 'rgba(45, 27, 78, 0.2)', strong: 'rgba(45, 27, 78, 0.3)' },
     bgDark: { subtle: 'rgba(10, 10, 10, 0.5)', default: 'rgba(10, 10, 10, 0.7)', strong: 'rgba(10, 10, 10, 0.9)' },
-    border: { light: 'rgba(192, 192, 192, 0.2)', highlight: 'rgba(192, 192, 192, 0.4)', dark: 'rgba(45, 27, 78, 0.3)', darkHighlight: 'rgba(45, 27, 78, 0.5)' },
-    shadow: { sm: '0 6px 12px -2px rgba(45, 27, 78, 0.3)', md: '0 12px 40px 0 rgba(45, 27, 78, 0.35)', lg: '0 25px 60px -8px rgba(45, 27, 78, 0.4)' },
+    border: { light: 'rgba(192, 192, 192, 0.2)', highlight: 'rgba(192, 192, 192, 0.4)', dark: 'rgba(45, 27, 78, 0.3)', darkHighlight: 'rgba(45, 27, 78, 0.5)', glow: 'rgba(192, 192, 192, 0.6)' },
+    shadow: { sm: '0 6px 12px -2px rgba(45, 27, 78, 0.3)', md: '0 12px 40px 0 rgba(45, 27, 78, 0.35)', lg: '0 25px 60px -8px rgba(45, 27, 78, 0.4)', xl: '0 30px 60px -10px rgba(45, 27, 78, 0.5)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #2d1b4e 0%, #9f1239 50%, #0a0a0a 100%)',

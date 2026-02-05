@@ -84,8 +84,8 @@ export const greenTheme: DesignSystemTheme = {
     saturate: '180%',
     bg: { subtle: 'rgba(34, 197, 94, 0.1)', default: 'rgba(34, 197, 94, 0.2)', strong: 'rgba(34, 197, 94, 0.3)' },
     bgDark: { subtle: 'rgba(5, 46, 22, 0.3)', default: 'rgba(5, 46, 22, 0.5)', strong: 'rgba(5, 46, 22, 0.7)' },
-    border: { light: 'rgba(34, 197, 94, 0.3)', highlight: 'rgba(34, 197, 94, 0.5)', dark: 'rgba(34, 197, 94, 0.1)', darkHighlight: 'rgba(34, 197, 94, 0.2)' },
-    shadow: { sm: '0 4px 6px -1px rgba(34, 197, 94, 0.1)', md: '0 8px 32px 0 rgba(34, 197, 94, 0.15)', lg: '0 20px 40px -5px rgba(34, 197, 94, 0.2)' },
+    border: { light: 'rgba(34, 197, 94, 0.3)', highlight: 'rgba(34, 197, 94, 0.5)', dark: 'rgba(34, 197, 94, 0.1)', darkHighlight: 'rgba(34, 197, 94, 0.2)', glow: 'rgba(34, 197, 94, 0.6)' },
+    shadow: { sm: '0 4px 6px -1px rgba(34, 197, 94, 0.1)', md: '0 8px 32px 0 rgba(34, 197, 94, 0.15)', lg: '0 20px 40px -5px rgba(34, 197, 94, 0.2)', xl: '0 30px 50px -10px rgba(34, 197, 94, 0.25)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',

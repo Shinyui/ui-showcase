@@ -25,7 +25,7 @@ const sectionVariants = cva('', {
 })
 
 export interface SectionProps
-  extends React.HTMLAttributes<HTMLSectionElement>,
+  extends Omit<React.HTMLAttributes<HTMLElement>, 'ref'>,
     VariantProps<typeof sectionVariants> {
   title?: string
   description?: string

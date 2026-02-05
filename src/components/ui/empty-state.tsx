@@ -17,7 +17,7 @@ const emptyStateVariants = cva('flex flex-col items-center justify-center p-8 te
 })
 
 export interface EmptyStateProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof emptyStateVariants> {
   icon?: React.ReactNode
   title?: string

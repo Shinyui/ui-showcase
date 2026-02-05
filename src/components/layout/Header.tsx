@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Palette } from 'lucide-react'
 import { ThemeSwitcher } from '@/components/showcase/ThemeSwitcher'
-import { Separator } from '@/components/ui/separator'
 
 export function Header() {
   return (

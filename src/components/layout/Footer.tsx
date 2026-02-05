@@ -1,5 +1,3 @@
-import { Separator } from '@/components/ui/separator'
-
 export function Footer() {
   return (
     <footer className="border-t border-border-default bg-surface">

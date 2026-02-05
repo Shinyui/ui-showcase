@@ -12,6 +12,8 @@ export type GradientVariant =
   | 'animated'
   | 'custom'
 
+export type GradientPreset = Exclude<GradientVariant, 'custom'>
+
 export type GradientDirection =
   | 'to-right'
   | 'to-left'
@@ -33,7 +35,12 @@ export interface GradientOptions {
 /**
  * Predefined gradient configurations
  */
-export const gradientPresets = {
+export const gradientPresets: Record<GradientPreset, {
+  background: string
+  colors?: readonly string[]
+  angle?: number
+  type?: string
+}> = {
   primary: {
     background: 'linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%)',
     colors: ['#ffffff', '#a3a3a3'],
@@ -69,7 +76,7 @@ export const gradientPresets = {
     colors: ['#404040', '#737373', '#a3a3a3', '#d4d4d4'],
     angle: -45,
   },
-} as const
+}
 
 /**
  * Direction to angle mapping
@@ -93,7 +100,7 @@ export function getGradientClasses(options: GradientOptions = {}): string {
 
   const baseClasses = 'gradient-base'
 
-  const variantClasses = {
+  const variantClasses: Record<string, string> = {
     primary: 'gradient-primary',
     'primary-subtle': 'gradient-primary-subtle',
     accent: 'gradient-accent',
@@ -101,11 +108,13 @@ export function getGradientClasses(options: GradientOptions = {}): string {
     neutral: 'gradient-neutral',
     'mesh-sunset': 'gradient-mesh',
     animated: 'gradient-animated',
-  }[variant]
+    custom: 'gradient-custom',
+  }
+  const variantClass = variantClasses[variant] || ''
 
   const animatedClass = animated ? 'gradient-animated' : ''
 
-  return [baseClasses, variantClasses, animatedClass].filter(Boolean).join(' ')
+  return [baseClasses, variantClass, animatedClass].filter(Boolean).join(' ')
 }
 
 /**
@@ -122,10 +131,12 @@ export function getGradientStyles(options: GradientOptions = {}): React.CSSPrope
     }
   }
 
-  // Predefined gradient
-  const preset = gradientPresets[variant]
-  if (preset) {
-    return { background: preset.background }
+  // Predefined gradient (exclude 'custom' variant)
+  if (variant !== 'custom') {
+    const preset = gradientPresets[variant as GradientPreset]
+    if (preset) {
+      return { background: preset.background }
+    }
   }
 
   // Default fallback
@@ -217,13 +228,6 @@ export const gradientAnimations = {
  * Get gradient animation class
  */
 export function getGradientAnimation(type: 'flow' | 'mesh' | 'shimmer' | 'pulse' = 'flow'): string {
-  const durations = {
-    flow: '15s',
-    mesh: '20s',
-    shimmer: '2s',
-    pulse: '3s',
-  }
-
   return `gradient-${type}`
 }
 
@@ -243,8 +247,8 @@ export function getTextGradientStyles(options: TextGradientOptions = {}): React.
 
   if (colors && colors.length > 0) {
     gradient = createLinearGradient(colors, angle)
-  } else if (variant) {
-    const preset = gradientPresets[variant]
+  } else if (variant && variant !== 'custom') {
+    const preset = gradientPresets[variant as GradientPreset]
     gradient = preset?.background || createLinearGradient(['#ffffff', '#a3a3a3'], angle)
   } else {
     gradient = createLinearGradient(['#ffffff', '#a3a3a3'], angle)

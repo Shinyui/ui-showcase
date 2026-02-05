@@ -84,8 +84,8 @@ export const blueTheme: DesignSystemTheme = {
     saturate: '180%',
     bg: { subtle: 'rgba(59, 130, 246, 0.1)', default: 'rgba(59, 130, 246, 0.2)', strong: 'rgba(59, 130, 246, 0.3)' },
     bgDark: { subtle: 'rgba(15, 23, 42, 0.3)', default: 'rgba(15, 23, 42, 0.5)', strong: 'rgba(15, 23, 42, 0.7)' },
-    border: { light: 'rgba(59, 130, 246, 0.3)', highlight: 'rgba(59, 130, 246, 0.5)', dark: 'rgba(59, 130, 246, 0.1)', darkHighlight: 'rgba(59, 130, 246, 0.2)' },
-    shadow: { sm: '0 4px 6px -1px rgba(59, 130, 246, 0.1)', md: '0 8px 32px 0 rgba(59, 130, 246, 0.15)', lg: '0 20px 40px -5px rgba(59, 130, 246, 0.2)' },
+    border: { light: 'rgba(59, 130, 246, 0.3)', highlight: 'rgba(59, 130, 246, 0.5)', dark: 'rgba(59, 130, 246, 0.1)', darkHighlight: 'rgba(59, 130, 246, 0.2)', glow: 'rgba(59, 130, 246, 0.6)' },
+    shadow: { sm: '0 4px 6px -1px rgba(59, 130, 246, 0.1)', md: '0 8px 32px 0 rgba(59, 130, 246, 0.15)', lg: '0 20px 40px -5px rgba(59, 130, 246, 0.2)', xl: '0 30px 50px -10px rgba(59, 130, 246, 0.25)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',

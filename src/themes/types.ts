@@ -77,8 +77,8 @@ export interface ThemeGlass {
   saturate: string
   bg: { subtle: string; default: string; strong: string }
   bgDark: { subtle: string; default: string; strong: string }
-  border: { light: string; highlight: string; dark: string; darkHighlight: string }
-  shadow: { sm: string; md: string; lg: string }
+  border: { light: string; highlight: string; dark: string; darkHighlight: string; glow: string }
+  shadow: { sm: string; md: string; lg: string; xl: string }
 }
 
 // ===== GRADIENT TOKENS =====

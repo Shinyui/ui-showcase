@@ -29,7 +29,7 @@ const iconVariants = {
 }
 
 export interface AlertProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof alertVariants> {
   title?: string
   icon?: React.ReactNode
@@ -54,7 +54,7 @@ export function Alert({
     onDismiss?.()
   }
 
-  const defaultIcon = icon !== undefined ? icon : iconVariants[variant]
+const defaultIcon = icon !== undefined ? icon : iconVariants[variant as keyof typeof iconVariants]
 
   return (
     <AnimatePresence>

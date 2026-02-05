@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Check, Copy } from 'lucide-react'
 import { useTheme } from '@/lib/theme-provider'
-import type { ThemeColors } from '@/themes/types'
 
 interface ColorSwatchProps {
   name: string

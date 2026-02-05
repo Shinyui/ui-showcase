@@ -17,7 +17,7 @@ const statisticVariants = cva('', {
 })
 
 export interface StatisticProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof statisticVariants> {
   value: number
   label?: string
@@ -156,7 +156,7 @@ export function Statistic({
 }
 
 // ===== STATISTIC GROUP =====
-export interface StatisticGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface StatisticGroupProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'> {
   children: React.ReactNode
   columns?: 1 | 2 | 3 | 4
 }

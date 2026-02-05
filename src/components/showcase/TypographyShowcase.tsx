@@ -1,5 +1,4 @@
 import { useTheme } from '@/lib/theme-provider'
-import type { DesignSystemTheme } from '@/themes/types'
 
 interface TypographyItemProps {
   label: string

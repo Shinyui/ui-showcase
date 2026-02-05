@@ -58,8 +58,8 @@ export const roseWhisperTheme: DesignSystemTheme = {
     saturate: '130%',
     bg: { subtle: 'rgba(229, 115, 115, 0.12)', default: 'rgba(229, 115, 115, 0.18)', strong: 'rgba(229, 115, 115, 0.25)' },
     bgDark: { subtle: 'rgba(18, 8, 8, 0.35)', default: 'rgba(18, 8, 8, 0.55)', strong: 'rgba(18, 8, 8, 0.75)' },
-    border: { light: 'rgba(255, 213, 79, 0.25)', highlight: 'rgba(255, 213, 79, 0.4)', dark: 'rgba(229, 115, 115, 0.15)', darkHighlight: 'rgba(229, 115, 115, 0.25)' },
-    shadow: { sm: '0 4px 10px -1px rgba(229, 115, 115, 0.15)', md: '0 10px 35px 0 rgba(229, 115, 115, 0.2)', lg: '0 20px 50px -5px rgba(229, 115, 115, 0.25)' },
+    border: { light: 'rgba(255, 213, 79, 0.25)', highlight: 'rgba(255, 213, 79, 0.4)', dark: 'rgba(229, 115, 115, 0.15)', darkHighlight: 'rgba(229, 115, 115, 0.25)', glow: 'rgba(255, 213, 79, 0.5)' },
+    shadow: { sm: '0 4px 10px -1px rgba(229, 115, 115, 0.15)', md: '0 10px 35px 0 rgba(229, 115, 115, 0.2)', lg: '0 20px 50px -5px rgba(229, 115, 115, 0.25)', xl: '0 30px 70px -10px rgba(229, 115, 115, 0.3)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #E57373 0%, #F48FB1 50%, #E57373 100%)',

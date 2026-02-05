@@ -22,7 +22,7 @@ const successStateVariants = cva('flex flex-col items-center justify-center p-8 
 })
 
 export interface SuccessStateProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof successStateVariants> {
   title?: string
   message?: string

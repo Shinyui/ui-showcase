@@ -58,8 +58,8 @@ export const midnightVelvetTheme: DesignSystemTheme = {
     saturate: '150%',
     bg: { subtle: 'rgba(114, 47, 55, 0.15)', default: 'rgba(114, 47, 55, 0.25)', strong: 'rgba(114, 47, 55, 0.35)' },
     bgDark: { subtle: 'rgba(13, 3, 9, 0.4)', default: 'rgba(13, 3, 9, 0.6)', strong: 'rgba(13, 3, 9, 0.8)' },
-    border: { light: 'rgba(199, 125, 131, 0.3)', highlight: 'rgba(199, 125, 131, 0.5)', dark: 'rgba(114, 47, 55, 0.2)', darkHighlight: 'rgba(114, 47, 55, 0.3)' },
-    shadow: { sm: '0 6px 12px -2px rgba(114, 47, 55, 0.2)', md: '0 12px 40px 0 rgba(114, 47, 55, 0.25)', lg: '0 25px 60px -8px rgba(114, 47, 55, 0.3)' },
+    border: { light: 'rgba(199, 125, 131, 0.3)', highlight: 'rgba(199, 125, 131, 0.5)', dark: 'rgba(114, 47, 55, 0.2)', darkHighlight: 'rgba(114, 47, 55, 0.3)', glow: 'rgba(199, 125, 131, 0.6)' },
+    shadow: { sm: '0 6px 12px -2px rgba(114, 47, 55, 0.2)', md: '0 12px 40px 0 rgba(114, 47, 55, 0.25)', lg: '0 25px 60px -8px rgba(114, 47, 55, 0.3)', xl: '0 30px 60px -10px rgba(114, 47, 55, 0.35)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #722F37 0%, #8B4B68 50%, #5c2335 100%)',

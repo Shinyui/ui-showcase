@@ -22,7 +22,7 @@ const errorStateVariants = cva('flex flex-col items-center justify-center p-8 te
 })
 
 export interface ErrorStateProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof errorStateVariants> {
   title?: string
   message?: string

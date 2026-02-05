@@ -101,8 +101,8 @@ export const slateTheme: DesignSystemTheme = {
       light: 'rgba(203, 213, 225, 0.15)',      // Base border
       highlight: 'rgba(203, 213, 225, 0.35)',  // Top/Left highlight for light reflection
       dark: 'rgba(51, 65, 85, 0.3)',           // Bottom/Right shadow for depth
-      glow: 'rgba(203, 213, 225, 0.6)',        // Hover glow effect
       darkHighlight: 'rgba(203, 213, 225, 0.25)',
+      glow: 'rgba(148, 163, 184, 0.5)',
     },
 
     // Enhanced shadow system with inset shadows for depth
@@ -110,7 +110,7 @@ export const slateTheme: DesignSystemTheme = {
       sm: '0 4px 12px -2px rgba(15, 23, 42, 0.3)',
       md: '0 8px 32px -4px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(203, 213, 225, 0.1) inset',
       lg: '0 20px 50px -8px rgba(15, 23, 42, 0.5), 0 0 0 1px rgba(203, 213, 225, 0.15) inset',
-      xl: '0 32px 64px -12px rgba(15, 23, 42, 0.6), 0 0 30px rgba(203, 213, 225, 0.1)',
+      xl: '0 20px 25px -5px rgba(15, 23, 42, 0.3), 0 8px 10px -6px rgba(15, 23, 42, 0.3)',
     },
   },
   gradient: {

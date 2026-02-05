@@ -22,7 +22,7 @@ const otpInputVariants = cva('', {
 })
 
 export interface OtpInputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'onChange'>,
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'onChange' | 'pattern'>,
     VariantProps<typeof otpInputVariants> {
   length?: number
   value?: string

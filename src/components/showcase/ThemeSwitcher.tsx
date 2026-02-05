@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
 import { useTheme } from '@/lib/theme-provider'
 import { getAllThemes } from '@/themes'
 import {

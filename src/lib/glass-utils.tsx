@@ -78,15 +78,15 @@ export function getGlassStyles(options: GlassOptions = {}): React.CSSProperties 
 
   const blurValues = { sm: 12, md: 20, lg: 28, xl: 36 }
   const bgValues = darkMode
-    ? { subtle: 'rgba(15, 23, 42, 0.25)', default: 'rgba(15, 23, 42, 0.45)', strong: 'rgba(15, 23, 42, 0.65)' }
-    : { subtle: 'rgba(100, 116, 139, 0.08)', default: 'rgba(100, 116, 139, 0.15)', strong: 'rgba(100, 116, 139, 0.25)' }
+    ? { subtle: 'rgba(15, 23, 42, 0.25)', default: 'rgba(15, 23, 42, 0.45)', strong: 'rgba(15, 23, 42, 0.65)', heavy: 'rgba(15, 23, 42, 0.75)' }
+    : { subtle: 'rgba(100, 116, 139, 0.08)', default: 'rgba(100, 116, 139, 0.15)', strong: 'rgba(100, 116, 139, 0.25)', heavy: 'rgba(100, 116, 139, 0.35)' }
 
   const variant = options.variant || 'default'
 
   return {
     backdropFilter: `blur(${blurValues[blur]}px) saturate(200%)`,
     WebkitBackdropFilter: `blur(${blurValues[blur]}px) saturate(200%)`,
-    backgroundColor: bgValues[variant],
+    backgroundColor: bgValues[variant as keyof typeof bgValues],
     border: '1px solid rgba(203, 213, 225, 0.15)',
     borderTop: '1px solid rgba(203, 213, 225, 0.35)',
     borderLeft: '1px solid rgba(203, 213, 225, 0.35)',
@@ -134,7 +134,7 @@ export function supportsBackdropFilter(): boolean {
   if (el.style.backdropFilter !== undefined) return true
 
   // Check webkit prefix
-  if (el.style.webkitBackdropFilter !== undefined) return true
+  if ('webkitBackdropFilter' in el.style) return true
 
   return false
 }

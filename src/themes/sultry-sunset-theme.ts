@@ -58,8 +58,8 @@ export const sultrySunsetTheme: DesignSystemTheme = {
     saturate: '180%',
     bg: { subtle: 'rgba(194, 65, 12, 0.2)', default: 'rgba(194, 65, 12, 0.3)', strong: 'rgba(194, 65, 12, 0.4)' },
     bgDark: { subtle: 'rgba(26, 10, 0, 0.4)', default: 'rgba(26, 10, 0, 0.6)', strong: 'rgba(26, 10, 0, 0.8)' },
-    border: { light: 'rgba(251, 191, 36, 0.4)', highlight: 'rgba(251, 191, 36, 0.6)', dark: 'rgba(194, 65, 12, 0.2)', darkHighlight: 'rgba(194, 65, 12, 0.3)' },
-    shadow: { sm: '0 6px 12px -2px rgba(194, 65, 12, 0.2)', md: '0 12px 40px 0 rgba(194, 65, 12, 0.25)', lg: '0 25px 60px -8px rgba(194, 65, 12, 0.3)' },
+    border: { light: 'rgba(251, 191, 36, 0.4)', highlight: 'rgba(251, 191, 36, 0.6)', dark: 'rgba(194, 65, 12, 0.2)', darkHighlight: 'rgba(194, 65, 12, 0.3)', glow: 'rgba(251, 191, 36, 0.7)' },
+    shadow: { sm: '0 6px 12px -2px rgba(194, 65, 12, 0.2)', md: '0 12px 40px 0 rgba(194, 65, 12, 0.25)', lg: '0 25px 60px -8px rgba(194, 65, 12, 0.3)', xl: '0 30px 70px -10px rgba(194, 65, 12, 0.35)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #c2410c 0%, #f43f5e 50%, #7c3aed 100%)',

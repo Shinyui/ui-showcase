@@ -58,8 +58,8 @@ export const noirSeductionTheme: DesignSystemTheme = {
     saturate: '100%',
     bg: { subtle: 'rgba(64, 64, 64, 0.15)', default: 'rgba(64, 64, 64, 0.25)', strong: 'rgba(64, 64, 64, 0.35)' },
     bgDark: { subtle: 'rgba(0, 0, 0, 0.6)', default: 'rgba(0, 0, 0, 0.8)', strong: 'rgba(0, 0, 0, 0.95)' },
-    border: { light: 'rgba(163, 163, 163, 0.2)', highlight: 'rgba(163, 163, 163, 0.4)', dark: 'rgba(64, 64, 64, 0.3)', darkHighlight: 'rgba(64, 64, 64, 0.5)' },
-    shadow: { sm: '0 6px 12px -2px rgba(0, 0, 0, 0.8)', md: '0 12px 40px 0 rgba(0, 0, 0, 0.9)', lg: '0 25px 60px -8px rgba(0, 0, 0, 1)' },
+    border: { light: 'rgba(163, 163, 163, 0.2)', highlight: 'rgba(163, 163, 163, 0.4)', dark: 'rgba(64, 64, 64, 0.3)', darkHighlight: 'rgba(64, 64, 64, 0.5)', glow: 'rgba(163, 163, 163, 0.5)' },
+    shadow: { sm: '0 6px 12px -2px rgba(0, 0, 0, 0.8)', md: '0 12px 40px 0 rgba(0, 0, 0, 0.9)', lg: '0 25px 60px -8px rgba(0, 0, 0, 1)', xl: '0 30px 70px -12px rgba(0, 0, 0, 1.1)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #000000 0%, #404040 50%, #1a1a1a 100%)',

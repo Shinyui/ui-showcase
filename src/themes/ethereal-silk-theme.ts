@@ -58,8 +58,8 @@ export const etherealSilkTheme: DesignSystemTheme = {
     saturate: '140%',
     bg: { subtle: 'rgba(167, 139, 250, 0.15)', default: 'rgba(167, 139, 250, 0.25)', strong: 'rgba(167, 139, 250, 0.35)' },
     bgDark: { subtle: 'rgba(248, 247, 252, 0.6)', default: 'rgba(248, 247, 252, 0.8)', strong: 'rgba(248, 247, 252, 0.95)' },
-    border: { light: 'rgba(249, 168, 212, 0.3)', highlight: 'rgba(249, 168, 212, 0.5)', dark: 'rgba(167, 139, 250, 0.15)', darkHighlight: 'rgba(167, 139, 250, 0.25)' },
-    shadow: { sm: '0 6px 12px -2px rgba(167, 139, 250, 0.15)', md: '0 12px 40px 0 rgba(167, 139, 250, 0.2)', lg: '0 25px 60px -8px rgba(167, 139, 250, 0.25)' },
+    border: { light: 'rgba(249, 168, 212, 0.3)', highlight: 'rgba(249, 168, 212, 0.5)', dark: 'rgba(167, 139, 250, 0.15)', darkHighlight: 'rgba(167, 139, 250, 0.25)', glow: 'rgba(249, 168, 212, 0.6)' },
+    shadow: { sm: '0 6px 12px -2px rgba(167, 139, 250, 0.15)', md: '0 12px 40px 0 rgba(167, 139, 250, 0.2)', lg: '0 25px 60px -8px rgba(167, 139, 250, 0.25)', xl: '0 30px 60px -10px rgba(167, 139, 250, 0.3)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #a78bfa 0%, #f9a8d4 50%, #f1f5f9 100%)',

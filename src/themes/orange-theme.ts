@@ -84,8 +84,8 @@ export const orangeTheme: DesignSystemTheme = {
     saturate: '180%',
     bg: { subtle: 'rgba(249, 115, 22, 0.1)', default: 'rgba(249, 115, 22, 0.2)', strong: 'rgba(249, 115, 22, 0.3)' },
     bgDark: { subtle: 'rgba(28, 25, 23, 0.3)', default: 'rgba(28, 25, 23, 0.5)', strong: 'rgba(28, 25, 23, 0.7)' },
-    border: { light: 'rgba(249, 115, 22, 0.3)', highlight: 'rgba(249, 115, 22, 0.5)', dark: 'rgba(249, 115, 22, 0.1)', darkHighlight: 'rgba(249, 115, 22, 0.2)' },
-    shadow: { sm: '0 4px 6px -1px rgba(249, 115, 22, 0.1)', md: '0 8px 32px 0 rgba(249, 115, 22, 0.15)', lg: '0 20px 40px -5px rgba(249, 115, 22, 0.2)' },
+    border: { light: 'rgba(249, 115, 22, 0.3)', highlight: 'rgba(249, 115, 22, 0.5)', dark: 'rgba(249, 115, 22, 0.1)', darkHighlight: 'rgba(249, 115, 22, 0.2)', glow: 'rgba(249, 115, 22, 0.6)' },
+    shadow: { sm: '0 4px 6px -1px rgba(249, 115, 22, 0.1)', md: '0 8px 32px 0 rgba(249, 115, 22, 0.15)', lg: '0 20px 40px -5px rgba(249, 115, 22, 0.2)', xl: '0 30px 50px -10px rgba(249, 115, 22, 0.25)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',

@@ -58,8 +58,8 @@ export const neonIntimacyTheme: DesignSystemTheme = {
     saturate: '200%',
     bg: { subtle: 'rgba(168, 85, 247, 0.1)', default: 'rgba(168, 85, 247, 0.15)', strong: 'rgba(168, 85, 247, 0.2)' },
     bgDark: { subtle: 'rgba(10, 5, 20, 0.3)', default: 'rgba(10, 5, 20, 0.5)', strong: 'rgba(10, 5, 20, 0.7)' },
-    border: { light: 'rgba(34, 211, 238, 0.4)', highlight: 'rgba(236, 72, 153, 0.6)', dark: 'rgba(168, 85, 247, 0.2)', darkHighlight: 'rgba(168, 85, 247, 0.3)' },
-    shadow: { sm: '0 4px 12px -1px rgba(168, 85, 247, 0.3)', md: '0 8px 32px 0 rgba(168, 85, 247, 0.4)', lg: '0 16px 50px -5px rgba(168, 85, 247, 0.5)' },
+    border: { light: 'rgba(34, 211, 238, 0.4)', highlight: 'rgba(236, 72, 153, 0.6)', dark: 'rgba(168, 85, 247, 0.2)', darkHighlight: 'rgba(168, 85, 247, 0.3)', glow: 'rgba(236, 72, 153, 0.7)' },
+    shadow: { sm: '0 4px 12px -1px rgba(168, 85, 247, 0.3)', md: '0 8px 32px 0 rgba(168, 85, 247, 0.4)', lg: '0 16px 50px -5px rgba(168, 85, 247, 0.5)', xl: '0 25px 70px -10px rgba(168, 85, 247, 0.6)' },
   },
   gradient: {
     primary: 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',

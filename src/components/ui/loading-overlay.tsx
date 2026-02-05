@@ -17,7 +17,7 @@ const loadingOverlayVariants = cva('fixed inset-0 z-50 flex items-center justify
 })
 
 export interface LoadingOverlayProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof loadingOverlayVariants> {
   show: boolean
   message?: string

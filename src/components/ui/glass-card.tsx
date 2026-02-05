@@ -26,7 +26,7 @@ const glassCardVariants = cva('relative overflow-hidden', {
 })
 
 export interface GlassCardProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof glassCardVariants> {
   title?: string
   description?: string
@@ -77,7 +77,7 @@ export function GlassCard({
 }
 
 // ===== GLASS PANEL =====
-export interface GlassPanelProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GlassPanelProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'> {
   variant?: VariantProps<typeof glassCardVariants>['variant']
   children: React.ReactNode
 }
@@ -102,7 +102,7 @@ export function GlassPanel({
 }
 
 // ===== GLASS BADGE =====
-export interface GlassBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GlassBadgeProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'> {
   variant?: VariantProps<typeof glassCardVariants>['variant']
   size?: 'sm' | 'md' | 'lg'
 }

@@ -19,7 +19,7 @@ const errorMessageVariants = cva(
 )
 
 export interface ErrorMessageProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>,
     VariantProps<typeof errorMessageVariants> {
   id?: string
   icon?: React.ReactNode

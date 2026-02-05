@@ -36,7 +36,6 @@ export function DatePicker({
   variant = 'default',
   className,
   id,
-  ...props
 }: DatePickerProps) {
   const [isOpen, setIsOpen] = React.useState(false)
   const [selectedMonth, setSelectedMonth] = React.useState(new Date())

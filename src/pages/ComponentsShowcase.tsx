@@ -12,7 +12,6 @@ import {
   Folder,
   File,
   Image,
-  Home,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -49,39 +48,32 @@ import {
 import { Separator } from '@/components/ui/separator'
 import { ComponentSection } from '@/components/showcase/ComponentSection'
 // New visual effects components
-import { GlassCard } from '@/components/ui/glass-card'
 import { GradientText } from '@/components/ui/gradient-text'
 import { GradientBg } from '@/components/ui/gradient-bg'
 import { AnimatedGradient } from '@/components/ui/animated-gradient'
-import { IconButton } from '@/components/ui/icon-button'
 import { Spinner, DotsSpinner } from '@/components/ui/spinner'
-import { Skeleton, SkeletonCard } from '@/components/ui/skeleton'
+import { SkeletonCard } from '@/components/ui/skeleton'
 import { SearchInput } from '@/components/ui/search-input'
 import { OtpInput } from '@/components/ui/otp-input'
-import { DatePicker } from '@/components/ui/date-picker'
 import { ProgressBar, ProgressCircle } from '@/components/ui/progress-bar'
 import { Statistic } from '@/components/ui/statistic'
-import { Alert } from '@/components/ui/alert'
 import { EmptyState } from '@/components/ui/empty-state'
 import { ErrorState } from '@/components/ui/error-state'
 import { SuccessState } from '@/components/ui/success-state'
 import { Accordion } from '@/components/ui/accordion'
 import { Pagination } from '@/components/ui/pagination'
-import { Stepper } from '@/components/ui/stepper'
-import { Timeline } from '@/components/ui/timeline'
 import { GlassmorphismShowcase } from '@/components/showcase/GlassmorphismShowcase'
 import { ColorShowcase } from '@/components/showcase/ColorShowcase'
 import { TypographyShowcase } from '@/components/showcase/TypographyShowcase'
 
 // Additional UI components
-import { ResponsiveWrapper, Show, Hide } from '@/components/ui/responsive-wrapper'
+import { Show, Hide } from '@/components/ui/responsive-wrapper'
 import { FormLayout, FormField, FormActions, FormRow } from '@/components/ui/form-layout'
 import { TimePicker } from '@/components/ui/time-picker'
 import { Link } from '@/components/ui/link'
 import { ChartContainer, ChartLegend } from '@/components/ui/chart-container'
 import { Popover } from '@/components/ui/popover'
 import { RadioGroup } from '@/components/ui/radio'
-import { PageLayout, PageHeader } from '@/components/ui/page-layout'
 import { HelperText } from '@/components/ui/helper-text'
 import { Sheet, SheetHeader, SheetBody, SheetFooter } from '@/components/ui/sheet'
 import { Tree } from '@/components/ui/tree'
@@ -98,7 +90,7 @@ import { SearchFilterPattern } from '@/components/patterns/search-filter-pattern
 import { FormPattern } from '@/components/patterns/form-pattern'
 import { AccessDenied } from '@/components/patterns/access-denied'
 import { BulkActionPattern } from '@/components/patterns/bulk-action-pattern'
-import { LoadingPattern, PageLoading, ContentLoading } from '@/components/patterns/loading-pattern'
+import { LoadingPattern } from '@/components/patterns/loading-pattern'
 import { CRUDPattern } from '@/components/patterns/crud-pattern'
 
 export function ComponentsShowcase() {

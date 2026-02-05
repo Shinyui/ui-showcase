@@ -85,8 +85,8 @@ export const grayscaleTheme: DesignSystemTheme = {
     saturate: '180%',
     bg: { subtle: 'rgba(255, 255, 255, 0.4)', default: 'rgba(255, 255, 255, 0.65)', strong: 'rgba(255, 255, 255, 0.8)' },
     bgDark: { subtle: 'rgba(0, 0, 0, 0.3)', default: 'rgba(0, 0, 0, 0.5)', strong: 'rgba(0, 0, 0, 0.7)' },
-    border: { light: 'rgba(255, 255, 255, 0.18)', highlight: 'rgba(255, 255, 255, 0.3)', dark: 'rgba(255, 255, 255, 0.08)', darkHighlight: 'rgba(255, 255, 255, 0.15)' },
-    shadow: { sm: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', md: '0 8px 32px 0 rgba(31, 38, 135, 0.15)', lg: '0 20px 40px -5px rgba(0, 0, 0, 0.2)' },
+    border: { light: 'rgba(255, 255, 255, 0.18)', highlight: 'rgba(255, 255, 255, 0.3)', dark: 'rgba(255, 255, 255, 0.08)', darkHighlight: 'rgba(255, 255, 255, 0.15)', glow: 'rgba(255, 255, 255, 0.4)' },
+    shadow: { sm: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', md: '0 8px 32px 0 rgba(31, 38, 135, 0.15)', lg: '0 20px 40px -5px rgba(0, 0, 0, 0.2)', xl: '0 30px 60px -12px rgba(0, 0, 0, 0.25)' },
   },
   // ===== GRADIENT TOKENS =====
   gradient: {
