@@ -45,7 +45,7 @@ export interface FormRowProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function FormRow({ className, children, ...props }: FormRowProps) {
   return (
-    <div className={cn('flex flex-col sm:flex-row sm:items-start sm:gap-4', className)} {...props}>
+    <div className={cn('flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-4', className)} {...props}>
       {children}
     </div>
   )
@@ -89,7 +89,7 @@ const alignVariants = {
 
 export function FormActions({ align = 'right', children, className, ...props }: FormActionsProps) {
   return (
-    <div className={cn('flex gap-3 pt-4', alignVariants[align], className)} {...props}>
+    <div className={cn('flex gap-3 pt-4 sm:pt-4 flex-col sm:flex-row', alignVariants[align], className)} {...props}>
       {children}
     </div>
   )

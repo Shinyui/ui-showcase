@@ -93,7 +93,7 @@ function ListItem({
       onClick={onClick}
       disabled={disabled}
       className={cn(
-        'w-full flex items-center gap-4 p-4 text-left transition-colors',
+        'w-full flex items-center gap-4 p-4 sm:p-3 min-h-11 text-left transition-colors',
         'hover:bg-elevated focus:outline-none focus:bg-elevated',
         selected && 'bg-elevated border-l-2 border-primary',
         disabled && 'opacity-50 cursor-not-allowed hover:bg-transparent',

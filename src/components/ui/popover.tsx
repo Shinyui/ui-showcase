@@ -60,7 +60,7 @@ export function Popover({
   }
 
   React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (
         popoverRef.current &&
         triggerRef.current &&
@@ -73,9 +73,13 @@ export function Popover({
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('touchstart', handleClickOutside)
     }
 
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
   }, [isOpen])
 
   const getPlacementStyles = (): React.CSSProperties => {
@@ -117,7 +121,7 @@ export function Popover({
         {isOpen && (
           <motion.div
             ref={popoverRef}
-            className={cn('z-50', popoverVariants({ variant }), className)}
+            className={cn('z-50 max-w-[calc(100vw-2rem)] sm:max-w-none', popoverVariants({ variant }), className)}
             style={getPlacementStyles()}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}

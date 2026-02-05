@@ -127,7 +127,7 @@ export function FileUpload({
         onDrop={handleDrop}
         onClick={() => !disabled && inputRef.current?.click()}
         className={cn(
-          'relative flex flex-col items-center justify-center p-8 rounded-lg cursor-pointer transition-all',
+          'relative flex flex-col items-center justify-center p-8 sm:p-6 min-h-24 rounded-lg cursor-pointer transition-all',
           fileUploadVariants({ variant }),
           isDragging && 'border-primary bg-primary/5',
           disabled && 'opacity-50 cursor-not-allowed',
@@ -186,7 +186,7 @@ export function FileUpload({
             {files.map((file, index) => (
               <motion.div
                 key={index}
-                className="flex items-center justify-between p-3 bg-surface border border-border-default rounded-md"
+                className="flex items-center justify-between p-3 sm:p-3 bg-surface border border-border-default rounded-md"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}

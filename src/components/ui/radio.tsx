@@ -63,7 +63,7 @@ export function RadioGroup({
             key={option.value}
             className={cn(
               'relative flex items-start gap-3 cursor-pointer',
-              'p-3 rounded-md border border-transparent',
+              'p-3 sm:p-2 rounded-md border border-transparent',
               'hover:bg-elevated transition-colors',
               option.disabled && 'opacity-50 cursor-not-allowed',
               value === option.value && 'bg-elevated border-border-subtle',

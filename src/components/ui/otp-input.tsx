@@ -10,9 +10,9 @@ const otpInputVariants = cva('', {
       glow: 'border border-border-default focus:shadow-[0_0_15px_rgba(163,163,163,0.3)] focus:border-primary',
     },
     size: {
-      sm: 'h-10 w-10 text-sm',
-      md: 'h-12 w-12 text-base',
-      lg: 'h-14 w-14 text-lg',
+      sm: 'h-11 w-11 sm:h-10 sm:w-10 text-base sm:text-sm',
+      md: 'h-12 w-12 sm:h-12 sm:w-12 text-base sm:text-base',
+      lg: 'h-14 w-14 text-lg sm:text-base',
     },
   },
   defaultVariants: {
@@ -140,7 +140,7 @@ export function OtpInput({
   }, [autoFocus])
 
   return (
-    <div className={cn('flex gap-2', className)} {...props}>
+    <div className={cn('flex gap-2 sm:gap-2', className)} {...props}>
       {Array.from({ length }).map((_, index) => (
         <input
           key={index}

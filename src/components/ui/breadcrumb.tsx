@@ -2,7 +2,7 @@ import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
-const breadcrumbVariants = cva('flex items-center gap-2 text-sm', {
+const breadcrumbVariants = cva('flex items-center gap-2 text-sm overflow-x-auto scrollbar-hide', {
   variants: {
     size: {
       sm: 'text-xs',
@@ -50,7 +50,7 @@ export function Breadcrumb({
           const isLast = index === items.length - 1
 
           return (
-            <li key={index} className="flex items-center gap-2">
+            <li key={index} className="flex items-center gap-2 flex-shrink-0">
               {index > 0 && <span className="text-text-muted">{defaultSeparator}</span>}
 
               {item.href ? (

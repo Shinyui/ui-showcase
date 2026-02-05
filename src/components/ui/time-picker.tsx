@@ -76,14 +76,18 @@ export function TimePicker({
   }
 
   React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (pickerRef.current && !pickerRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
   }, [])
 
   const hours = hour12
@@ -106,7 +110,7 @@ export function TimePicker({
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'w-full flex items-center justify-between px-3 py-2 text-left',
+          'w-full flex items-center justify-between px-4 py-3 sm:px-3 sm:py-2 min-h-11 text-left',
           'bg-background border border-border-default rounded-md',
           'hover:border-border-subtle transition-colors',
           'focus:outline-none focus:ring-2 focus:ring-primary',
@@ -125,8 +129,8 @@ export function TimePicker({
         {isOpen && (
           <motion.div
             className={cn(
-              'absolute z-50 mt-1 p-4 rounded-lg shadow-lg',
-              'bg-surface border border-border-default',
+              'absolute z-50 mt-1 p-4 rounded-lg shadow-lg max-h-[70vh] overflow-y-auto',
+              'bg-surface border border-border-default bottom-[calc(100%+0.25rem)] sm:top-auto sm:bottom-auto',
               timePickerVariants({ variant })
             )}
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -145,7 +149,7 @@ export function TimePicker({
                       type="button"
                       onClick={() => setHour(h)}
                       className={cn(
-                        'w-full py-2 text-sm rounded transition-colors',
+                        'w-full py-3 sm:py-2 min-h-11 text-sm rounded transition-colors',
                         'hover:bg-elevated focus:outline-none',
                         (hour12 ? (h === (hour % 12 || 12)) : h === hour) && 'bg-primary text-primary-foreground'
                       )}
@@ -166,7 +170,7 @@ export function TimePicker({
                       type="button"
                       onClick={() => setMinute(m)}
                       className={cn(
-                        'w-full py-2 text-sm rounded transition-colors',
+                        'w-full py-3 sm:py-2 min-h-11 text-sm rounded transition-colors',
                         'hover:bg-elevated focus:outline-none',
                         m === minute && 'bg-primary text-primary-foreground'
                       )}

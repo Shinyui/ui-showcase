@@ -12,9 +12,9 @@ const searchInputVariants = cva(
         glow: 'focus:shadow-[0_0_20px_rgba(163,163,163,0.3)]',
       },
       size: {
-        sm: 'h-9 px-3 text-sm',
-        md: 'h-10 px-4 text-base',
-        lg: 'h-12 px-5 text-lg',
+        sm: 'h-11 sm:h-9 px-4 sm:px-3 py-3 sm:py-2 text-base sm:text-sm',
+        md: 'h-11 sm:h-10 px-4 sm:px-4 py-3 sm:py-2 text-base sm:text-sm',
+        lg: 'h-12 sm:h-12 px-5 sm:px-5 py-3 sm:py-2 text-lg sm:text-base',
       },
     },
     defaultVariants: {
@@ -112,7 +112,7 @@ export function SearchInput({
           'w-full pl-10 pr-10 rounded-md border border-border-default',
           'bg-background text-text-primary placeholder:text-text-muted',
           'focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent',
-          'transition-all',
+          'transition-all touch-manipulation',
           searchInputVariants({ variant, size })
         )}
         {...props}

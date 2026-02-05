@@ -87,7 +87,6 @@ import { Sheet, SheetHeader, SheetBody, SheetFooter } from '@/components/ui/shee
 import { Tree } from '@/components/ui/tree'
 import { Dropdown } from '@/components/ui/dropdown'
 import { FileUpload } from '@/components/ui/file-upload'
-import { Sidebar, SidebarItem, SidebarGroup } from '@/components/ui/sidebar'
 import { Table } from '@/components/ui/table'
 import { DataGrid, DataGridItem } from '@/components/ui/data-grid'
 import { AppBar } from '@/components/ui/app-bar'
@@ -805,21 +804,6 @@ export function ComponentsShowcase() {
               </>
             }
           />
-        </ComponentSection>
-
-        <ComponentSection title="Sidebar" description="Collapsible sidebar with items." delay={1.25}>
-          <div className="flex gap-4 h-64">
-            <Sidebar
-              width="sm"
-              header={<div className="font-semibold">Menu</div>}
-              footer={<div className="text-xs text-text-muted">v1.0.0</div>}
-            >
-              <SidebarGroup title="Main">
-                <SidebarItem icon={<Home className="h-4 w-4" />} label="Dashboard" active />
-                <SidebarItem icon={<Settings className="h-4 w-4" />} label="Settings" />
-              </SidebarGroup>
-            </Sidebar>
-          </div>
         </ComponentSection>
 
         <ComponentSection title="Popover & Dropdown" description="Floating content components." delay={1.3}>

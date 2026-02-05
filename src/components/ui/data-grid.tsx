@@ -32,11 +32,11 @@ export function DataGrid({
 }: DataGridProps) {
   return (
     <div
-      className={cn(dataGridVariants({ variant }), 'p-4', className)}
+      className={cn(dataGridVariants({ variant }), 'p-2 sm:p-4 overflow-x-auto smooth-scroll-mobile', className)}
       {...props}
     >
       <div
-        className={cn('grid')}
+        className={cn('grid min-w-[600px]')}
         style={{
           gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
           gap: `${gap * 0.25}rem`,
@@ -54,7 +54,7 @@ export interface DataGridItemProps extends React.HTMLAttributes<HTMLDivElement> 
 
 export function DataGridItem({ className, children, ...props }: DataGridItemProps) {
   return (
-    <div className={cn('p-4 rounded-md bg-elevated', className)} {...props}>
+    <div className={cn('p-3 sm:p-4 rounded-md bg-elevated', className)} {...props}>
       {children}
     </div>
   )

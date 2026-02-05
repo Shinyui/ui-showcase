@@ -58,14 +58,18 @@ export function DatePicker({
   }
 
   React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (pickerRef.current && !pickerRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
   }, [])
 
   const getDaysInMonth = (date: Date) => {
@@ -129,7 +133,7 @@ export function DatePicker({
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'w-full flex items-center justify-between px-3 py-2 text-left',
+          'w-full flex items-center justify-between px-4 py-3 sm:px-3 sm:py-2 min-h-11 text-left',
           'bg-background border border-border-default rounded-md',
           'hover:border-border-subtle transition-colors',
           'focus:outline-none focus:ring-2 focus:ring-primary',
@@ -148,8 +152,8 @@ export function DatePicker({
         {isOpen && (
           <motion.div
             className={cn(
-              'absolute z-50 mt-1 p-4 rounded-lg shadow-lg',
-              'bg-surface border border-border-default',
+              'absolute z-50 mt-1 p-4 rounded-lg shadow-lg max-h-[70vh] overflow-y-auto',
+              'bg-surface border border-border-default bottom-[calc(100%+0.25rem)] sm:top-auto sm:bottom-auto',
               datePickerVariants({ variant })
             )}
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -213,7 +217,7 @@ export function DatePicker({
                     onClick={() => handleDateSelect(date)}
                     disabled={isDisabled(date) || !isCurrentMonth}
                     className={cn(
-                      'h-8 w-8 text-sm rounded-md transition-colors',
+                      'h-11 w-full sm:h-8 sm:w-8 text-sm rounded-md transition-colors',
                       'hover:bg-elevated focus:outline-none focus:ring-2 focus:ring-primary',
                       isSelected(date) && 'bg-primary text-primary-foreground',
                       isToday(date) && !isSelected(date) && 'border border-primary',

@@ -15,8 +15,8 @@ const iconButtonVariants = cva(
         ghost: 'hover:bg-elevated/50',
       },
       size: {
-        sm: 'h-8 w-8',
-        md: 'h-10 w-10',
+        sm: 'h-11 w-11 sm:h-8 sm:w-8',
+        md: 'h-11 w-11 sm:h-10 sm:w-10',
         lg: 'h-12 w-12',
         xl: 'h-14 w-14',
       },

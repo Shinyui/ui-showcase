@@ -49,14 +49,18 @@ export function Dropdown({
   const selectedOption = options.find(opt => opt.value === value)
 
   React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
   }, [])
 
   const handleSelect = (optionValue: string) => {
@@ -71,7 +75,7 @@ export function Dropdown({
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'w-full flex items-center justify-between px-3 py-2 text-left',
+          'w-full flex items-center justify-between px-4 py-3 sm:px-3 sm:py-2 min-h-11 text-left',
           'bg-background border border-border-default rounded-md',
           'hover:border-border-subtle transition-colors',
           'focus:outline-none focus:ring-2 focus:ring-primary'
@@ -119,7 +123,7 @@ export function Dropdown({
                 onClick={() => handleSelect(option.value)}
                 disabled={option.disabled}
                 className={cn(
-                  'w-full flex items-center gap-2 px-3 py-2 text-left',
+                  'w-full flex items-center gap-2 px-4 py-3 sm:px-3 sm:py-2 min-h-11 text-left',
                   'hover:bg-elevated transition-colors',
                   'focus:outline-none focus:bg-elevated',
                   option.disabled && 'opacity-50 cursor-not-allowed',

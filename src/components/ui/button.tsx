@@ -30,10 +30,10 @@ const buttonVariants = cva(
           'relative overflow-hidden bg-primary text-primary-foreground shimmer',
       },
       size: {
-        sm: 'h-9 px-3 text-xs',
-        md: 'h-10 px-4 py-2',
-        lg: 'h-11 px-8',
-        icon: 'h-10 w-10',
+        sm: 'h-9 sm:h-8 px-3 sm:px-2 min-h-9 sm:min-h-8 text-xs',
+        md: 'h-11 sm:h-10 px-4 sm:px-4 py-2 min-h-11 sm:min-h-10',
+        lg: 'h-11 px-8 min-h-11',
+        icon: 'h-11 w-11 sm:h-10 sm:w-10 min-h-11',
       },
     },
     defaultVariants: {

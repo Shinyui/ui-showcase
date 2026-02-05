@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 const stepperVariants = cva('w-full', {
   variants: {
     orientation: {
-      horizontal: 'flex items-center justify-between',
+      horizontal: 'flex items-center justify-between sm:flex-row flex-col sm:space-y-0 space-y-4',
       vertical: 'flex flex-col space-y-4',
     },
     variant: {
@@ -141,7 +141,7 @@ interface StepIndicatorProps {
 }
 
 function StepIndicator({ status, icon, index, clickable, onClick }: StepIndicatorProps) {
-  const baseClasses = 'relative flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300'
+  const baseClasses = 'relative flex items-center justify-center w-11 h-11 sm:w-8 sm:h-8 rounded-full transition-all duration-300'
 
   const statusClasses = {
     complete: 'bg-primary text-primary-foreground',

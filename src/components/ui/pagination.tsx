@@ -86,7 +86,7 @@ export function Pagination({
 
   const buttonClass = (isActive: boolean, isDisabled: boolean) =>
     cn(
-      'min-w-[2.5rem] h-10 flex items-center justify-center rounded-md transition-all',
+      'min-h-11 min-w-[44px] sm:min-w-[2.5rem] px-3 sm:px-4 flex items-center justify-center rounded-md transition-all',
       'focus:outline-none focus:ring-2 focus:ring-primary',
       isActive && 'bg-primary text-primary-foreground',
       !isActive && !isDisabled && 'hover:bg-elevated text-text-primary',
@@ -128,7 +128,7 @@ export function Pagination({
       {pages.map((page, index) => {
         if (typeof page === 'string') {
           return (
-            <span key={index} className="min-w-[2.5rem] h-10 flex items-center justify-center text-text-muted">
+            <span key={index} className="min-h-11 min-w-[44px] sm:min-w-[2.5rem] flex items-center justify-center text-text-muted">
               {page}
             </span>
           )

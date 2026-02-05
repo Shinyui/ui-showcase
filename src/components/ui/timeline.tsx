@@ -81,7 +81,7 @@ function TimelineItemComponent({
 
   return (
     <motion.div
-      className="relative flex gap-4 pb-8 last:pb-0"
+      className="relative flex gap-3 sm:gap-4 pb-8 last:pb-0"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.1, type: 'spring', stiffness: 300 }}
@@ -90,7 +90,7 @@ function TimelineItemComponent({
       <div className="relative flex flex-col items-center">
         <motion.div
           className={cn(
-            'w-10 h-10 rounded-full flex items-center justify-center text-white flex-shrink-0',
+            'w-11 h-11 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white flex-shrink-0',
             statusColors[status]
           )}
           initial={{ scale: 0 }}
@@ -111,7 +111,7 @@ function TimelineItemComponent({
       </div>
 
       {/* Content */}
-      <div className="flex-1 pt-1">
+      <div className="flex-1 pt-2 sm:pt-1">
         {date && (
           <p className="text-xs text-text-muted mb-1">{date}</p>
         )}

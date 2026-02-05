@@ -158,7 +158,7 @@ export interface SheetBodyProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function SheetBody({ className, ...props }: SheetBodyProps) {
   return (
-    <div className={cn('flex-1 overflow-y-auto p-6', className)} {...props} />
+    <div className={cn('flex-1 overflow-y-auto p-6 smooth-scroll-mobile', className)} {...props} />
   )
 }
 
@@ -167,6 +167,6 @@ export interface SheetFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function SheetFooter({ className, ...props }: SheetFooterProps) {
   return (
-    <div className={cn('flex items-center justify-end gap-3 p-6 border-t border-border-default', className)} {...props} />
+    <div className={cn('flex items-center justify-end gap-3 p-6 pb-[env(safe-area-inset-bottom)] border-t border-border-default', className)} {...props} />
   )
 }

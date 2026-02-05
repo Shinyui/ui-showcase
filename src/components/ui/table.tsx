@@ -102,7 +102,7 @@ export function Table<T extends Record<string, any>>({
   const someSelected = selected.size > 0 && selected.size < data.length
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto smooth-scroll-mobile">
       <table
         className={cn(tableVariants({ variant, size }), className)}
         {...props}
@@ -110,7 +110,7 @@ export function Table<T extends Record<string, any>>({
         <thead className="bg-surface">
           <tr>
             {selectable && (
-              <th className="px-4 py-3 text-left">
+              <th className="px-2 sm:px-4 py-3 sm:py-4 text-left">
                 <input
                   type="checkbox"
                   checked={allSelected}
@@ -128,7 +128,7 @@ export function Table<T extends Record<string, any>>({
               <th
                 key={column.id}
                 className={cn(
-                  'px-4 py-3 text-left font-semibold text-text-primary',
+                  'px-2 sm:px-4 py-3 sm:py-4 min-w-[120px] text-left font-semibold text-text-primary',
                   column.className,
                   sortable && 'cursor-pointer hover:bg-elevated transition-colors select-none'
                 )}
@@ -174,7 +174,7 @@ export function Table<T extends Record<string, any>>({
                 )}
               >
                 {selectable && (
-                  <td className="px-4 py-3">
+                  <td className="px-2 sm:px-4 py-3 sm:py-4">
                     <input
                       type="checkbox"
                       checked={isSelected}
@@ -186,7 +186,7 @@ export function Table<T extends Record<string, any>>({
                 {columns.map(column => (
                   <td
                     key={column.id}
-                    className={cn('px-4 py-3 text-text-primary', column.className)}
+                    className={cn('px-2 sm:px-4 py-3 sm:py-4 min-w-[120px] text-text-primary', column.className)}
                   >
                     {column.cell(row)}
                   </td>
